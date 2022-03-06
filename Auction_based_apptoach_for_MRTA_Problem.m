@@ -1,9 +1,5 @@
-%%Description
-% cluster Market-based MTSP ---> TSP 2-opt
 clc;
 clear all;
-%https://link.springer.com/content/pdf/10.1007%2Fs10846-012-9805-3.pdf
-
 %% creat matrix of nods
 A=100; % size of matrix
 [nod_list_x_y,nod_matrix]=matrix_into_nod(A);
@@ -104,6 +100,7 @@ end
 
 
 %% K-means method via 2-opt
+% cluster Market-based MTSP ---> TSP 2-opt
 tic
 if (n_agents<n_tasks)
 [cluster_indx,Clusters_pos] = kmeans(tasksposM,n_agents);
